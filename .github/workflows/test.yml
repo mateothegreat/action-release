@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: action-release
-        uses: mateotehgreat/action-release@main
+        uses: mateothegreat/action-release@main
         with:
           owner: mateothegreat
           repo: action-release
