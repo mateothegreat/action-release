@@ -12,6 +12,7 @@ jobs:
       - name: action-release
         uses: mateothegreat/action-release@main
         with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           owner: mateothegreat
           repo: action-release
           increment: patch
