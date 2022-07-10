@@ -1,6 +1,8 @@
 name: "action-semantic-release"
 description: "GitHub action to auto-magically perform semantic version bumps and create releases."
 author: "mateothegreat"
+icon: "box"
+color: "purple"
 inputs:
   github_token:
     required: true
