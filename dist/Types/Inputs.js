@@ -26,7 +26,7 @@ class Inputs {
     constructor(env) {
         var _a, _b, _c, _d;
         this.default = '0.0.0';
-        if (core.getInput('github_token', { required: true }).trim().match(/^ghp_[a-z\d]{36}$/i)) {
+        if (core.getInput('github_token', { required: true }).trim()) {
             this.github_token = env.INPUT_GITHUB_TOKEN.trim();
         }
         else {

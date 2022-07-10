@@ -16,18 +16,15 @@ export class Inputs {
 
     public constructor(env: { [ key: string ]: string }) {
 
-        core.info(core.getInput('github_token', { required: true }).length.toString());
-        this.github_token = env.INPUT_GITHUB_TOKEN.trim();
+        if (core.getInput('github_token', { required: true }).trim()) {
 
-        // if (core.getInput('github_token', { required: true }).trim()) {
-        //
-        //     this.github_token = env.INPUT_GITHUB_TOKEN.trim();
-        //
-        // } else {
-        //
-        //     throw new Error(`github_token is not a valid GitHub personal access token: ${ env.INPUT_GITHUB_TOKEN }`);
-        //
-        // }
+            this.github_token = env.INPUT_GITHUB_TOKEN.trim();
+
+        } else {
+
+            throw new Error(`github_token is not a valid GitHub personal access token: ${ env.INPUT_GITHUB_TOKEN }`);
+
+        }
 
         if (core.getInput('owner', { required: true }).trim().match(/^[a-z\d-_]{1,50}$/i)) {
 
