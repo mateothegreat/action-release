@@ -27,10 +27,10 @@ inputs:
     required: false
     description: "Automatically generate release notes for the release (it will be appended to the body if it is set)."
   committer_name:
-    required: false
+    required: true
     description: "Name of the committer."
   committer_email:
-    required: false
+    required: true
     description: "Email of the committer."
 outputs:
   current_version:

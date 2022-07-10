@@ -19,3 +19,5 @@ jobs:
           owner: mateothegreat
           repo: action-release
           increment: patch
+          committer_name: Matthew Davis
+          committer_email: matthew@matthewdavis.io
