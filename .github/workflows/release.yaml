@@ -8,9 +8,21 @@ permissions:
   contents: write
 
 jobs:
+  codeql:
+    name: codeql
+    runs-on: ubuntu-latest
+    steps:
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v2
+        with:
+          languages: javascript, typescript
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v2
+
   release:
     name: Perform a semantic release
     runs-on: ubuntu-latest
+    needs: codeql
     steps:
       - name: action-release
         uses: mateothegreat/action-release@main
