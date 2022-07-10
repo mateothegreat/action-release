@@ -4,12 +4,20 @@
 
 GitHub action to auto-magically perform semantic version bumps and create releases.
 
+* Doesn't use some hacky `git` subshell commands (straight to the REST API baby!) 👏👏👏
+* Creates a new tag off of specified branch using semantic versioning.
+* Creates a new release based on new tag with notes.
+
+![screenshot](screenshot.png)
+
 ## Inputs
 
 * `owner` __(required)__ - string - The owner of your repository (username or organization name).
 * `repo` __(required)__ - string - The name of your repository.
 * `increment` __(required)__ - string - Increment based on major, minor, or release.
 * `default` (optional) - string - The default tag if there are no tags (defaults to 0.0.0).
+* `prefix` (optional) - string - Prefix to add to the semantic version value (defaults to none).
+* `branch` (optional) - string - Branch to base tag off of (defaults to main).
 * `release_name` (optional) - string - Name of the release (defaults to the new version).
 * `release_body` (optional) - string - Body of the release.
 * `release_notes` (optional) - boolean - Automatically generate release notes for the release (it will be appended to
@@ -48,8 +56,8 @@ jobs:
         uses: mateothegreat/action-release@main
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          owner: mateothegreat
-          repo: action-release
+          owner: youreawesome
+          repo: nuts-and-bolts
           increment: patch
           committer_name: Matthew Davis
           committer_email: matthew@matthewdavis.io
@@ -80,9 +88,12 @@ jobs:
         uses: mateothegreat/action-release@main
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          owner: mateothegreat
-          repo: action-release
+          owner: youreawesome
+          repo: nuts-and-bolts
           increment: patch
+          default: v0.0.0
+          prefix: v
+          branch: main
           release_name: MVP release 🎉
           release_body: |
             This is the body of the release.

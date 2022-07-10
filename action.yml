@@ -17,9 +17,15 @@ inputs:
   default:
     required: false
     description: "The default tag if there are no tags (defaults to 0.0.0)."
+  prefix:
+    required: false
+    description: "Prefix to add to the semantic version value (defaults to none)."
   increment:
     required: true
     description: "Increment based on major, minor, or release."
+  branch:
+    required: false
+    description: "Branch to base tag off of (defaults to main)."
   release_name:
     required: false
     description: "Name of the release (defaults to the new version)."
