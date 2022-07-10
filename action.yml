@@ -2,6 +2,9 @@ name: "action-release"
 description: "GitHub action to auto-magically perform semantic version bumps and create releases."
 author: "mateothegreat"
 inputs:
+  github_token:
+    required: true
+    description: "GitHub token with repo permissions."
   owner:
     required: true
     description: "The owner of this repository."

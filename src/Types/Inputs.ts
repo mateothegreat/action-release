@@ -16,7 +16,7 @@ export class Inputs {
 
     public constructor(env: { [ key: string ]: string }) {
 
-        if (core.getInput('github_token', { required: true }).trim().match(/^ghp_[a-z\d]{36}$/i)) {
+        if (core.getInput('github_token', { required: true }).trim()) {
 
             this.github_token = env.INPUT_GITHUB_TOKEN.trim();
 
