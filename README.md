@@ -1,10 +1,8 @@
 # action-release
 
-GitHub action to auto-magically perform semantic version bumps and create releases.
-
-[![Build Status](https://github.com/mateothegreat/action-release/workflows/Bump%20version/badge.svg)](https://github.com/mateothegreat/action-release/workflows/release/badge.svg)
-[![Stable Version](https://img.shields.io/github/v/tag/mateothegreat/action-release)](https://img.shields.io/github/v/tag/mateothegreat/action-release)
 [![Latest Release](https://img.shields.io/github/v/release/mateothegreat/action-release?color=%233D9970)](https://img.shields.io/github/v/release/mateothegreat/action-release?color=%233D9970)
+
+GitHub action to auto-magically perform semantic version bumps and create releases.
 
 ## Inputs
 

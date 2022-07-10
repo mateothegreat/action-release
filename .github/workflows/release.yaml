@@ -19,5 +19,10 @@ jobs:
           owner: mateothegreat
           repo: action-release
           increment: patch
+          release_name: MVP release 🎉
+          release_body: |
+            This is the body of the release.
+            Line 2 on and one 👏..
+          release_notes: true
           committer_name: Matthew Davis
           committer_email: matthew@matthewdavis.io
