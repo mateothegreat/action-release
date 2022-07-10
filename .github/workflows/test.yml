@@ -1,0 +1,17 @@
+name: release
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  release:
+    name: Perform a semantic release
+    runs-on: ubuntu-latest
+    steps:
+      - name: action-release
+        uses: mateotehgreat/action-release@main
+        with:
+          owner: mateothegreat
+          repo: action-release
+          increment: patch

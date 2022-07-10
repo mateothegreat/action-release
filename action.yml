@@ -1,0 +1,39 @@
+name: "action-release"
+description: "GitHub action to auto-magically perform semantic version bumps and create releases."
+author: "mateothegreat"
+inputs:
+  owner:
+    required: true
+    description: "The owner of this repository."
+  repo:
+    required: true
+    description: "The name of this repository."
+  default:
+    required: false
+    description: "The default tag if there are no tags (defaults to 0.0.0)."
+  increment:
+    required: true
+    description: "Increment based on major, minor, or release."
+  release_name:
+    required: false
+    description: "Name of the release (defaults to the new version)."
+  release_body:
+    required: false
+    description: "Body of the release."
+  release_notes:
+    required: false
+    description: "Automatically generate release notes for the release (it will be appended to the body if it is set)."
+  committer_name:
+    required: false
+    description: "Name of the committer."
+  committer_email:
+    required: false
+    description: "Email of the committer."
+outputs:
+  current_version:
+    description: "Current (previous) version (i.e.: 0.0.1)."
+  next_version:
+    description: "Next (applied) version (i.e.: 0.0.2)."
+runs:
+  using: "node12"
+  main: "dist/index.js"
