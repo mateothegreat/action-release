@@ -16,6 +16,7 @@ export class Inputs {
 
     public constructor(env: { [ key: string ]: string }) {
 
+        console.log(core.getInput('github_token', { required: true }).length);
         if (core.getInput('github_token', { required: true }).trim()) {
 
             this.github_token = env.INPUT_GITHUB_TOKEN.trim();
