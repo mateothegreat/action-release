@@ -27,7 +27,7 @@
     "dependencies": {
         "@actions/core": "^1.2.6",
         "@actions/exec": "^1.0.4",
-        "@actions/tool-cache": "^1.7.0",
+        "@actions/tool-cache": "^2.0.1",
         "@octokit/rest": "^19.0.3",
         "chalk": "^4.1.1",
         "discord-webhook-node": "^1.1.8",
