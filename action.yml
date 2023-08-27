@@ -47,5 +47,5 @@ outputs:
   next_version:
     description: "Next (applied) version (i.e.: 0.0.2)."
 runs:
-  using: "node12"
+  using: "node16"
   main: "dist/index.js"
